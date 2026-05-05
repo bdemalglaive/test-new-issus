@@ -15,14 +15,22 @@ body:
       label: Module concerné
       description: Sur quelle partie de l'app le bug se manifeste-t-il ?
       options:
-        - Companies (sociétés)
+        - Companies (sociétés + chaînes + wizard)
+        - Contacts
         - Leads
         - Visites
-        - Suggested Order (commandes suggérées)
-        - Analyse / Dashboard
-        - Admin (users, RGAM, archives, etc.)
-        - Auth / Login
+        - Agenda / Tâches
+        - Suggested Orders (commandes suggérées)
+        - Kitchen Audit
+        - Merchandising (profile + survey)
+        - Analyse (contacts / pipeline / traffic light / merchandising)
+        - Dashboard (home + KPI)
+        - Power BI / Reports embed
         - Scan carte de visite
+        - Recherche globale
+        - Admin (users, RGAM, archives, demandes ERP, concurrents/familles merch)
+        - Profil utilisateur
+        - Auth / Login / Impersonation
         - Autre / transversal
     validations:
       required: true
