@@ -69,11 +69,22 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: checkboxes
     id: user-roles
     attributes:
       label: Rôles utilisateurs impactés
-      placeholder: "AM / SM / INTSM / SD / ADMIN / SUPER_ADMIN / RGAM / RGSM / Service Client / Tous"
+      description: Cocher tous les rôles concernés (un ou plusieurs)
+      options:
+        - label: AM (Account Manager)
+        - label: SM (Sales Manager)
+        - label: INTSM
+        - label: SD
+        - label: ADMIN
+        - label: SUPER_ADMIN
+        - label: SERVICE_CLIENT
+        - label: RGAM
+        - label: RGSM
+        - label: Tous les rôles
 
   - type: textarea
     id: screenshots
