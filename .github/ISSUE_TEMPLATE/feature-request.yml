@@ -1,7 +1,7 @@
 name: ✨ Feature request
 description: Demander une nouvelle fonctionnalité ou évolution
 title: "feat: "
-labels: ["enhancement"]
+labels: ["évolution"]
 body:
   - type: markdown
     attributes:

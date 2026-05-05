@@ -1,7 +1,7 @@
 name: 🛠️ Task
 description: Tâche technique interne (refactor, migration, ops, dette)
 title: "chore: "
-labels: ["task"]
+labels: ["tâche"]
 body:
   - type: markdown
     attributes:
