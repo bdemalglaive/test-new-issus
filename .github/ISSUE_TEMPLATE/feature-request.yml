@@ -1,0 +1,87 @@
+name: ✨ Feature request
+description: Demander une nouvelle fonctionnalité ou évolution
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Décris le besoin métier en partant de l'usage utilisateur.
+        Si la feature est déjà spécifiée dans la HackMD, indique le lien dans la section dédiée.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module concerné
+      options:
+        - Companies (sociétés)
+        - Leads
+        - Visites
+        - Suggested Order (commandes suggérées)
+        - Analyse / Dashboard
+        - Admin (users, RGAM, archives, etc.)
+        - Auth / Login
+        - Scan carte de visite
+        - Nouveau module
+        - Autre / transversal
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User story
+      description: Format "En tant que [rôle], je veux [action] afin de [bénéfice]"
+      placeholder: "En tant qu'AM, je veux pouvoir filtrer les visites par dealer afin de préparer ma tournée hebdomadaire."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte / pourquoi
+      description: Quel problème résout cette feature ? Quelle douleur actuelle ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation
+      description: Liste cochable des comportements attendus (Given / When / Then)
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+      render: markdown
+    validations:
+      required: true
+
+  - type: input
+    id: spec-link
+    attributes:
+      label: Lien spec HackMD / Wave / Sprint
+      placeholder: "https://hackmd.io/... ou Wave 4 / Sprint 12"
+
+  - type: input
+    id: user-roles
+    attributes:
+      label: Rôles utilisateurs concernés
+      placeholder: "AM / SM / INTSM / SD / ADMIN / SUPER_ADMIN / RGAM / RGSM / Service Client / Tous"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorité (estimation initiale)
+      options:
+        - P0 — bloquant pour la prochaine release
+        - P1 — important, à planifier
+        - P2 — nice to have
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockup
+    attributes:
+      label: Mockup / wireframe (optionnel)
+      description: Coller image, lien Figma, ou description textuelle du visuel attendu

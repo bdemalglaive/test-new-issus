@@ -1,0 +1,93 @@
+name: 🐛 Bug report
+description: Signaler un dysfonctionnement de l'app
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de remplir ce rapport.
+        Plus la description est précise, plus le fix arrive vite.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module concerné
+      description: Sur quelle partie de l'app le bug se manifeste-t-il ?
+      options:
+        - Companies (sociétés)
+        - Leads
+        - Visites
+        - Suggested Order (commandes suggérées)
+        - Analyse / Dashboard
+        - Admin (users, RGAM, archives, etc.)
+        - Auth / Login
+        - Scan carte de visite
+        - Autre / transversal
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Comportement observé
+      description: Que s'est-il passé ?
+      placeholder: "Quand je clique sur 'Sauvegarder', la page reste figée et rien ne se passe."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+      placeholder: "Le formulaire devrait être enregistré et l'utilisateur redirigé vers la fiche."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire
+      placeholder: |
+        1. Aller sur la page X
+        2. Remplir le champ Y avec la valeur Z
+        3. Cliquer sur W
+        4. Observer le résultat
+      render: markdown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: env
+    attributes:
+      label: Environnement
+      options:
+        - Préprod
+        - Production
+        - Dev local
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Gravité
+      options:
+        - Bloquant (impossibilité d'utiliser une fonctionnalité critique)
+        - Majeur (fonctionnalité dégradée mais contournement possible)
+        - Mineur (gêne ponctuelle)
+        - Cosmétique (visuel, label, alignement)
+    validations:
+      required: true
+
+  - type: input
+    id: user-roles
+    attributes:
+      label: Rôles utilisateurs impactés
+      placeholder: "AM / SM / INTSM / SD / ADMIN / SUPER_ADMIN / RGAM / RGSM / Service Client / Tous"
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Captures d'écran ou logs
+      description: Coller des captures d'écran (drag & drop) ou logs Symfony pertinents

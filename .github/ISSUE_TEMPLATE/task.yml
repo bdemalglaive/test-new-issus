@@ -1,0 +1,77 @@
+name: 🛠️ Task
+description: Tâche technique interne (refactor, migration, ops, dette)
+title: "chore: "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pour les tâches techniques qui ne sont ni un bug observable par l'utilisateur, ni une nouvelle fonctionnalité.
+        Ex: refactor, migration de données, mise à jour de dépendance, ajout de tests, doc.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type de tâche
+      options:
+        - Refactor (réorganisation de code sans changement fonctionnel)
+        - Migration (données, schéma BDD)
+        - Dépendances (bump composer/packages)
+        - Tests (ajout couverture, fix flaky)
+        - Documentation
+        - Ops / Infrastructure / CI
+        - Dette technique
+        - Autre
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: Que faut-il faire ?
+      description: Description concise de la tâche
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Pourquoi ?
+      description: Quel bénéfice attendu ? Quel problème résolu ? Quel risque évité ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Périmètre / Out of scope
+      description: Ce qui doit être fait ET ce qui ne fait PAS partie de cette tâche
+      value: |
+        **Inclus**
+        -
+
+        **Hors périmètre**
+        -
+      render: markdown
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation
+      value: |
+        - [ ]
+        - [ ]
+      render: markdown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priorité
+      options:
+        - P0 — urgent (blocage opérationnel)
+        - P1 — à faire dans le sprint courant
+        - P2 — quand on aura un peu de temps
+    validations:
+      required: true
