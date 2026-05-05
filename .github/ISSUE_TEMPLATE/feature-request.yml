@@ -63,11 +63,22 @@ body:
       label: Lien spec HackMD / Wave / Sprint
       placeholder: "https://hackmd.io/... ou Wave 4 / Sprint 12"
 
-  - type: input
+  - type: checkboxes
     id: user-roles
     attributes:
       label: Rôles utilisateurs concernés
-      placeholder: "AM / SM / INTSM / SD / ADMIN / SUPER_ADMIN / RGAM / RGSM / Service Client / Tous"
+      description: Cocher tous les rôles qui utiliseront cette feature
+      options:
+        - label: AM (Account Manager)
+        - label: SM (Sales Manager)
+        - label: INTSM
+        - label: SD
+        - label: ADMIN
+        - label: SUPER_ADMIN
+        - label: SERVICE_CLIENT
+        - label: RGAM
+        - label: RGSM
+        - label: Tous les rôles
 
   - type: dropdown
     id: priority
