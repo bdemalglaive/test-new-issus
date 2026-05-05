@@ -58,17 +58,6 @@ body:
       required: true
 
   - type: dropdown
-    id: env
-    attributes:
-      label: Environnement
-      options:
-        - Préprod
-        - Production
-        - Dev local
-    validations:
-      required: true
-
-  - type: dropdown
     id: severity
     attributes:
       label: Gravité
